@@ -1,0 +1,37 @@
+<div class="container">
+    <h3>Listado de Motos</h3>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Precio</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($motos as $moto) { ?>
+                <tr>
+                    <td>
+                        <?php echo $moto->marca; ?>
+                    </td>
+                    <td>
+                        <?php echo $moto->modelo; ?>
+                    </td>
+                    <td>
+                        <?php echo $moto->anio; ?>
+                    </td>
+                    <td>
+                        <?php echo $moto->precio; ?>
+                    </td>
+                    <td>
+                        <a href="verMasAdm/<?= $moto->id ?>" class="btn btn-primary">Ver moto</a>
+                        <a href="editMoto/<?= $moto->id ?>" class="btn btn-success ml-2">Editar</a>
+                        <a href="delete/<?= $moto->id ?>" class="btn btn-danger ml-2">Borrar</a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <?php foreach ($models as $model): ?>
+            <div class="col-md-4 mb-4 text-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+
+                        <a href="verMasModelo/<?= $model->modelo ?>" class="card-text" style="text-decoration:none">Modelo:
+                            <?= $model->modelo ?>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>
+    <a href="home" class="btn btn-secondary btn-lg">Volver</a>
+</div>

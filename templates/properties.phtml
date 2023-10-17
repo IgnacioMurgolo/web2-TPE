@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <?php foreach ($properties as $prop): ?>
+            <div class="col-md-4 mb-4 text-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <p class="card-text">Marca:
+                            <?= $prop->marca ?>
+                        </p>
+                        <p class="card-text">Modelo:
+                            <?= $prop->modelo ?>
+                        </p>
+                        <p class="card-text">Año:
+                            <?= $prop->anio ?>
+                        </p>
+                        <p class="card-text">Precio: $
+                            <?= $prop->precio ?>
+                        </p>
+                        <p class="card-text">Cilindrada:
+                            <?= $prop->cilindrada ?>
+                        </p>
+                        <p class="card-text">Velocidad maxima:
+                            <?= $prop->velocidad_max ?>
+                        </p>
+                        <p class="card-text">Tipo de uso:
+                            <?= $prop->tipo_uso ?>
+                        </p>
+                        <p class="card-text">Capacidad del tanque:
+                            <?= $prop->capacidad_tanque ?>
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>
+</div>

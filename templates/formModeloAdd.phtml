@@ -1,0 +1,34 @@
+<form action="addModelo" method="POST">
+    <div class="container">
+        <h3 class="mt-4">Agregar nuevo modelo</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="modelo">Modelo</label>
+                    <input required name="modelo" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="cilindrada">Cilindrada</label>
+                    <input required name="cilindrada" type="number" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="velocidad_max">Velocidad máxima</label>
+                    <input required name="velocidad_max" type="number" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="tipo_uso">Tipo de uso</label>
+                    <input required name="tipo_uso" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="capacidad_tanque">Capacidad del tanque</label>
+                    <input required name="capacidad_tanque" type="number" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button type="submit" class="btn btn-primary mt-3">Agregar</button>
+        </div>
+    </div>
+</form>

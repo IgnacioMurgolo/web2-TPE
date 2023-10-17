@@ -1,0 +1,41 @@
+<div class="container">
+    <h3>Listado de Modelos</h3>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Modelo</th>
+                <th>Cilindrada</th>
+                <th>Velocidad máxima</th>
+                <th>Tipo de uso</th>
+                <th>Capacidad del tanque</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($modelos as $mod) { ?>
+                <tr>
+                    <td>
+                        <?php echo $mod->modelo; ?>
+                    </td>
+                    <td>
+                        <?php echo $mod->cilindrada; ?>
+                    </td>
+                    <td>
+                        <?php echo $mod->velocidad_max; ?>
+                    </td>
+                    <td>
+                        <?php echo $mod->tipo_uso; ?>
+                    </td>
+                    <td>
+                        <?php echo $mod->capacidad_tanque; ?>
+                    </td>
+                    <td>
+                        <a href="verMasModeloAdm/<?= $mod->modelo ?>" class="btn btn-primary">Ver moto</a>
+                        <a href="editModelo/<?= $mod->modelo ?>" class="btn btn-success ml-2">Editar</a>
+                        <a href="deleteModelo/<?= $mod->modelo ?>" class="btn btn-danger ml-2">Borrar</a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>

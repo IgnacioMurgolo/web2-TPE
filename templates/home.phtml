@@ -1,0 +1,23 @@
+
+<section id="home"> 
+    <div class="container-fluid">
+        <div class="row">
+            <?php foreach($motos as $moto): ?>
+                <div class="col-md-4 mb-4 text-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">Marca: <?= $moto->marca ?></p>
+                            <p class="card-text">Modelo: <?= $moto->modelo ?></p>
+                            <p class="card-text">Año: <?= $moto->anio ?></p>
+                            <p class="card-text">Precio: $<?= $moto->precio ?></p>
+                            <a href="verMas/<?= $moto->id ?>" class="btn btn-secondary btn-lg">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+        
+    </div>
+</section>
+
+
