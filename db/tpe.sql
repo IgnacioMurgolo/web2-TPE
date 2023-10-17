@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-09-2023 a las 01:54:15
+-- Tiempo de generación: 17-10-2023 a las 16:21:28
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -40,9 +40,8 @@ CREATE TABLE `caracteristica` (
 --
 
 INSERT INTO `caracteristica` (`modelo`, `cilindrada`, `velocidad_max`, `tipo_uso`, `capacidad_tanque`) VALUES
-('interceptor', 650, 178, 'touring', 15),
-('wave', 110, 100, 'urbano', 9),
-('xr250', 250, 130, 'offroad', 12.5),
+('interceptor', 900, 251, 'viajar', 25),
+('xr250', 2502121, 130, 'offroad', 12.5),
 ('z900', 900, 186, 'deportivo', 13);
 
 -- --------------------------------------------------------
@@ -64,10 +63,28 @@ CREATE TABLE `moto` (
 --
 
 INSERT INTO `moto` (`id`, `marca`, `modelo`, `anio`, `precio`) VALUES
-(1, 'honda', 'xr250', 2018, 2800),
 (2, 'royal enfield', 'interceptor', 2022, 7800),
 (3, 'kawasaki', 'z900', 2019, 22000),
-(4, 'honda', 'wave', 2020, 1500);
+(5, 'honda', 'xr250', 2011, 12345);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id_usuario` int(11) NOT NULL,
+  `usuario` varchar(45) NOT NULL,
+  `password` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `usuario`, `password`) VALUES
+(1, 'webadmin', '$2y$10$yhw7GrbFdUorrxzokkgciOjAhJwQ4syyPMAYL9L19MH6Px/cJ7XPK');
 
 --
 -- Índices para tablas volcadas
@@ -87,6 +104,12 @@ ALTER TABLE `moto`
   ADD KEY `fk_moto_caracteristica` (`modelo`);
 
 --
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -94,7 +117,13 @@ ALTER TABLE `moto`
 -- AUTO_INCREMENT de la tabla `moto`
 --
 ALTER TABLE `moto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
