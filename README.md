@@ -11,7 +11,8 @@
     Tienda de motos. 
   ## Descripción
     Se trata de una web de venta de motos con sus características. 
-    Hay dos tablas, una utilizada para definir las marcas de motos y modelo, y otra para definir las caracteristicas según el modelo de la misma. 
+    Hay distintas tablas, una utilizada para definir las marcas de motos y modelo, y otra para definir las caracteristicas según el modelo de la misma. 
+    Además creamos una tercera para guardar los usuarios que administran la web.
     El diagrama de entidad-relación tiene un elemento en común que es "modelo".
 
   ## Diagrama de Entidad-Relación:
