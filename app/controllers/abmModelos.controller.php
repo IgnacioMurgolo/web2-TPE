@@ -1,7 +1,7 @@
 <?php
-require_once '../TPE/app/models/modelos.model.php';
-require_once '../TPE/app/views/abmModelos.view.php';
-require_once '../TPE/app/helpers/auth.helper.php';
+require_once 'app/models/modelos.model.php';
+require_once 'app/views/abmModelos.view.php';
+require_once 'app/helpers/auth.helper.php';
 class AbmModelosController
 {
     private $view;

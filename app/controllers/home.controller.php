@@ -1,8 +1,8 @@
 <?php
-require_once '../TPE/app/models/motos.model.php';
-require_once '../TPE/app/views/home.view.php';
-require_once '../TPE/app/models/modelos.model.php';
-require_once '../TPE/app/helpers/auth.helper.php';
+require_once 'app/models/modelos.model.php';
+require_once 'app/models/motos.model.php';
+require_once 'app/views/home.view.php';
+require_once 'app/helpers/auth.helper.php';
 class HomeController
 {
     private $model;
@@ -26,8 +26,9 @@ class HomeController
         $this->viewHome->showProperties($properties);
     }
 
-    public function showPropertiesByModelo($modelo)
+    public function showPropertiesByModelo($params)
     {
+        $modelo = $params[1];
         $properties = $this->modeloModel->getProperties($modelo);
         $this->viewHome->showProperties($properties);
     }

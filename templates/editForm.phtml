@@ -1,26 +1,26 @@
 <h1>Editar moto</h1>
 <form action="updateMoto" method="POST" class="row g-3 border m-5">
     <?php foreach ($moto as $col) { ?>
-        <input name="id" type="hidden" class="form-control" value="<?php echo $col->id ?>">
+        <input name="id" type="hidden" class="form-control" value="<?= $col->id ?>">
         <div class="form-floating">
-            <input required name="marca" type="text" value="<?php echo $col->marca ?>" class="form-control">
+            <input required name="marca" type="text" value="<?= $col->marca ?>" class="form-control">
             <label for="floatingInput">Marca</label>
         </div>
         <div class="form-floating">
             <select name="modelo" id="" class="form-select">
                 <?php foreach ($modelos as $mod) { ?>
-                    <option value="<?php echo $mod->modelo ?>">
-                        <?php echo $mod->modelo ?>
+                    <option value="<?= $mod->modelo ?>">
+                        <?= $mod->modelo ?>
                     </option>
                 <?php } ?>
             </select>
         </div>
         <div class="form-floating">
-            <input required name="anio" type="number" value="<?php echo $col->anio ?>" class="form-control">
+            <input required name="anio" type="number" value="<?= $col->anio ?>" class="form-control">
             <label for="floatingInput">Año</label>
         </div>
         <div class="form-floating">
-            <input required name="precio" type="number" value="<?php echo $col->precio ?>" class="form-control">
+            <input required name="precio" type="number" value="<?= $col->precio ?>" class="form-control">
             <label for="floatingInput">Precio</label>
         </div>
     <?php } ?>

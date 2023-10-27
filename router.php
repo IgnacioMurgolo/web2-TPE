@@ -30,7 +30,7 @@ switch ($params[0]) {
         break;
     case 'verMasModelo':
         $controller = new HomeController();
-        $controller->showPropertiesByModelo($params[1]);
+        $controller->showPropertiesByModelo($params);
         break;
     case 'login':
         $controller = new AuthController();

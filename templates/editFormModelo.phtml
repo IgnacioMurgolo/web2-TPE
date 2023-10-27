@@ -1,21 +1,21 @@
 <h1>Editar modelo</h1>
 <form action="updateModelo" method="POST" class="row g-3 border m-5">
     <?php foreach ($modelo as $mod) { ?>
-        <input name="modelo" type="hidden" class="form-control" value="<?php echo $mod->modelo ?>">
-        <div class="form-floating">
-            <input required name="cilindrada" type="number" value="<?php echo $mod->cilindrada ?>" class="form-control">
-            <label for="floatingInput">Cilindrada</label>
+        <input name="modelo" type="hidden" class="form-control" value="<?= $mod->modelo ?>">
+        <div class="form-floating" >
+            <input required name="cilindrada" type="number" value="<?= $mod->cilindrada ?>" class="form-control">
+            <label for="floatingInput" class="label">Cilindrada</label>
         </div>
         <div class="form-floating">
-            <input required name="velocidad_max" type="number" value="<?php echo $mod->velocidad_max ?>" class="form-control">
+            <input required name="velocidad_max" type="number" value="<?= $mod->velocidad_max ?>" class="form-control">
             <label for="floatingInput">Velocidad máxima</label>
         </div>
         <div class="form-floating">
-            <input required name="tipo_uso" type="text" value="<?php echo $mod->tipo_uso ?>" class="form-control">
+            <input required name="tipo_uso" type="text" value="<?= $mod->tipo_uso ?>" class="form-control">
             <label for="floatingInput">Tipo de uso</label>
         </div>
         <div class="form-floating">
-            <input required name="capacidad_tanque" type="text" value="<?php echo $mod->capacidad_tanque ?>" class="form-control">
+            <input required name="capacidad_tanque" type="text" value="<?= $mod->capacidad_tanque ?>" class="form-control">
             <label for="floatingInput">Capacidad tanque</label>
         </div>
     <?php } ?>

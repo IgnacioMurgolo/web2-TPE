@@ -1,7 +1,7 @@
 <?php
-require_once '../TPE/app/models/user.model.php';
-require_once '../TPE/app/views/auth.view.php';
-require_once '../TPE/app/helpers/auth.helper.php';
+require_once 'app/models/user.model.php';
+require_once 'app/views/auth.view.php';
+require_once 'app/helpers/auth.helper.php';
 class AuthController{
     private $model;
     private $view;

@@ -1,8 +1,8 @@
 <?php
-require_once '../TPE/app/models/modelos.model.php';
-require_once '../TPE/app/models/motos.model.php';
-require_once '../TPE/app/views/abmMotos.view.php';
-require_once '../TPE/app/helpers/auth.helper.php';
+require_once 'app/models/modelos.model.php';
+require_once 'app/models/motos.model.php';
+require_once 'app/views/abmMotos.view.php';
+require_once 'app/helpers/auth.helper.php';
 
 class AbmMotosController
 {
